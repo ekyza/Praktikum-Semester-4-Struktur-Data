@@ -29,14 +29,18 @@ public class BinaryTree {
     }
 
     public void preOrder(Node node) {
-        System.out.print(node.data + " ");
-        inOrder(node.left);
-        inOrder(node.right);
+        if (node != null) {
+            System.out.print(node.data + " ");
+            inOrder(node.left);
+            inOrder(node.right);
+        }
     }
 
     public void postOrder(Node node) {
-        inOrder(node.left);
-        inOrder(node.right);
-        System.out.print(node.data + " ");
+        if (node != null) {
+            inOrder(node.left);
+            inOrder(node.right);
+            System.out.print(node.data + " ");
+        }
     }
 }
